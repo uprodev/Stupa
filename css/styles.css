@@ -374,7 +374,7 @@ header {
         text-transform: uppercase;
         color: #FFFFFF; }
         .menu-responsive .wrap-block > ul > li > a:hover {
-          color: #FCE300; }
+          font-weight: 600; }
       .menu-responsive .wrap-block > ul > li .is-open {
         font-weight: 600; }
     .menu-responsive .wrap-block > ul li:last-child {
@@ -1624,13 +1624,19 @@ footer {
   font-weight: 500; }
 
 .product .info ul li {
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
   .product .info ul li .arrow-wrap {
     opacity: 0;
     -webkit-transition: all .4s ease;
     transition: all .4s ease; }
-  .product .info ul li:hover .arrow-wrap {
-    opacity: 1; }
+  .product .info ul li:hover {
+    left: -25px; }
+    .product .info ul li:hover .arrow-wrap {
+      opacity: 1; }
 
 .product figure {
   position: relative; }

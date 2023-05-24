@@ -992,6 +992,9 @@
   .contact-section .content{
     padding: 0;
   }
+  .product .info ul li:hover{
+    left: -10px;
+  }
 }
 
 @media (max-width:767px) {
@@ -1735,7 +1738,24 @@
   .product .info ul li:last-child {
     margin-top: 100px;
   }
-  .product .info ul li:nth-child(4) .arrow-wrap img{
+  .product .info ul li .arrow-wrap img{
     content: url("../img/icon-4-2.svg");
+  }
+  .product .info ul li:nth-child(2) .arrow-wrap img{
+    content: url("../img/icon-4-1.svg");
+  }
+
+  .product .info ul li:first-child{
+    width: 238px;
+  }
+
+  .product .info ul li:nth-child(4){
+    width: 155px;
+  }
+  .product .info ul li:nth-child(5){
+    width: 155px;
+  }
+  .hotels-content .item .text .btn-wrap a{
+    left: 0;
   }
 }
