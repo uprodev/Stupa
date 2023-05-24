@@ -680,7 +680,17 @@
 
   .contact-section .right p a {
     font-size: 18px;
-    line-height: 30px; } }
+    line-height: 30px; }
+
+  .truth-content .item .bg {
+    top: -120px; }
+
+  .truth-content .item:nth-child(2n) .bg {
+    top: -70px; }
+
+  footer .bottom p a {
+    font-size: 12px;
+    line-height: 16px; } }
 @media (max-width: 1200px) {
   header .logo-wrap a img {
     width: 100px; }
@@ -1663,7 +1673,7 @@
     max-width: 325px; }
 
   .truth-content .bg .wrap {
-    margin-top: 485px; }
+    margin-top: 315px; }
 
   .truth-content .bg p {
     margin-bottom: 231px; }
@@ -1700,7 +1710,8 @@
     max-height: 7px; }
 
   .product .info ul li:nth-child(3) {
-    margin-top: -30px; }
+    margin-top: -30px;
+    width: 235px; }
 
   .product .info ul li:nth-child(2) {
     margin-top: -30px; }
@@ -1727,6 +1738,15 @@
     width: 155px; }
 
   .hotels-content .item .text .btn-wrap a {
-    left: 0; } }
+    left: 0; }
+
+  .btn-default b {
+    left: 0 !important; }
+
+  .truth-content .item .bg {
+    top: -68px; }
+
+  .truth-content .item:nth-child(2n) .bg p {
+    left: -10%; } }
 
 /*# sourceMappingURL=responsive.css.map */
