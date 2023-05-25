@@ -3,8 +3,7 @@
   display: table;
   clear: both;}*/
 body {
-  /*font-family: 'Eastman Roman Trial', sans-serif;*/
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Eastman Roman Trial', sans-serif;
   scroll-behavior: smooth;
   font-style: normal;
   font-weight: 300;
@@ -1712,6 +1711,10 @@ footer {
 
 .contact-section ul li a {
   font-size: 20px; }
+
+.home-banner p.title {
+  font-family: "Helvetica Neue", sans-serif;
+  letter-spacing: 1px; }
 
 /*--------------------------END-PAGE-PAGODA---------------------------*/
 
