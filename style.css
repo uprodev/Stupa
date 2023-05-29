@@ -1,0 +1,108 @@
+/*
+Theme Name: Stupa
+Requires at least: 6.1
+Version: 1.0
+*/
+
+/* .page-numbers{
+    display: none;
+} */
+.page-numbers {
+  display: none;
+}
+.next,
+.prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  gap: 20px;
+  -ms-flex-align: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: right;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #000000;
+  font-family: "Helvetica Neue", sans-serif;
+  transition: all 0.8s ease;
+}
+@media (max-width: 1600px) {
+  .next,
+  .prev {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 575px) {
+  .next,
+  .prev {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+.next.disabled,
+.prev.disabled {
+  opacity: 0.7;
+  pointer-events: none;
+}
+.next::after {
+  content: "";
+  background-image: url("./img/icon-9.svg");
+  height: 10px;
+  width: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 14px;
+  min-height: 8px;
+  display: block;
+  position: relative;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  left: 0px;
+  /* transition: all .4s ease; */
+}
+.next:hover:after {
+  transition: all 0.25s;
+  left: 5px;
+}
+.prev:hover:before {
+  transition: all 0.25s;
+  right: 5px;
+}
+.prev::before {
+  content: "";
+  background-image: url("./img/icon-9.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  min-width: 14px;
+  min-height: 8px;
+  display: block;
+  transform: rotate(180deg);
+  right: 0px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.nav-links {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 50px;
+}
+@media (max-width: 575px) {
+  .nav-links {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
