@@ -2,6 +2,7 @@
   content: "";
   display: table;
   clear: both;}*/
+
 body {
   font-family: 'Eastman Roman Trial', sans-serif;
   scroll-behavior: smooth;
@@ -548,7 +549,7 @@ section .title-img-yellow:before {
     right: 0;
     width: 80px;
     height: 80px;
-    border: 1px solid transparent;
+    border: 1px solid #000;
     border-radius: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -570,8 +571,13 @@ section .title-img-yellow:before {
       margin-top: -6px;
       -webkit-transition: all .4s ease;
       transition: all .4s ease; }
-    .nav-wrap .swiper-button-next:hover, .nav-wrap .swiper-button-prev:hover {
-      border: 1px solid #000; }
+    .nav-wrap .swiper-button-prev:hover img{
+      left: -20px;
+
+    }
+.nav-wrap .swiper-button-next:hover img{
+  left: 30px;
+}
   .nav-wrap .swiper-button-prev {
     margin-left: -40px; }
     .nav-wrap .swiper-button-prev img {
@@ -870,7 +876,7 @@ section .title-img-yellow:before {
   .contact .right {
     width: 39%; }
     .contact .right p {
-      width: 435px;
+      width: 355px;
       max-width: 100%;
       margin-bottom: 30px; }
   .contact .btn-wrap {
@@ -1016,9 +1022,16 @@ footer {
 
 .truth-content {
   position: relative;
-  padding: 0 0 185px;
+
   z-index: 2;
-  overflow: hidden; }
+   }
+
+.truth-content .wrap{
+  overflow: hidden;
+  padding: 100px 0 185px;
+  margin-top: -100px;
+}
+
   .truth-content .bg .wrap {
     margin-top: 728px; }
   .truth-content .bg p {
@@ -1716,6 +1729,10 @@ footer {
   font-family: "Helvetica Neue", sans-serif;
   letter-spacing: 1px; }
 
+
+.truth-banner .bg img, .bottom-link .bg img{
+  width: calc(100% + 3px);
+}
 /*--------------------------END-PAGE-PAGODA---------------------------*/
 
 /*# sourceMappingURL=styles.css.map */

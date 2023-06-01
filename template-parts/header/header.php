@@ -14,17 +14,17 @@ $buttons = get_field('header_buttons', 'option');
                 </div>
             </div>
             <?php
-            if ($logo):
+            if ($logo) :
                 $logo_size = 'logo_size';
                 $logo_url = wp_get_attachment_image_url($logo, $logo_size);
                 $logo_alt = get_post_meta($logo, '_wp_attachment_image_alt', true);
                 $home_url = (is_front_page()) ? '#page' : get_home_url();
-                ?>
+            ?>
                 <div class="logo-wrap">
                     <a href="<?php echo $home_url; ?>">
-                        <?php if (strripos($logo_url, '.svg')): ?>
+                        <?php if (strripos($logo_url, '.svg')) : ?>
                             <img src="<?php echo $logo_url; ?>" alt="<?php echo $logo_alt ?>" width="180" height="76">
-                        <?php else: ?>
+                        <?php else : ?>
                             <?php echo wp_get_attachment_image($logo, $logo_size); ?>
                         <?php endif; ?>
                     </a>
@@ -32,22 +32,15 @@ $buttons = get_field('header_buttons', 'option');
             <?php endif; ?>
             <nav class="top-menu">
                 <div class="lang-wrap">
-                    <div class="nice-select" tabindex="0">
-                        <span class="current">EN</span>
-                        <ul class="list">
-                            <li class="option selected"><a href="#">EN</a></li>
-                            <li class="option"><a href="#">UA</a></li>
-                            <li class="option"><a href="#">RU</a></li>
-                        </ul>
-                    </div>
+                    <?php language_selector_flags(); ?>
                 </div>
-                <?php if ($buttons): ?>
+                <?php if ($buttons) : ?>
                     <ul>
-                        <?php foreach ($buttons as $item):
+                        <?php foreach ($buttons as $item) :
                             $button_link = $item['button']; ?>
                             <?php
 
-                            if ($button_link):
+                            if ($button_link) :
                                 $link_url = $button_link['url'];
                                 $link_title = $button_link['title']; ?>
                                 <li><a href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
@@ -76,14 +69,7 @@ $buttons = get_field('header_buttons', 'option');
         ]);
         ?>
         <div class="lang-wrap">
-            <div class="nice-select" tabindex="0">
-                <span class="current">EN</span>
-                <ul class="list">
-                    <li class="option selected"><a href="#">EN</a></li>
-                    <li class="option"><a href="#">UA</a></li>
-                    <li class="option"><a href="#">RU</a></li>
-                </ul>
-            </div>
+            <?php language_selector_flags(); ?>
         </div>
 
     </div>

@@ -137,15 +137,16 @@ function my_posts_pagination($template, $class)
     $total = isset($wp_query->max_num_pages) ? $wp_query->max_num_pages : 1;
     $current = get_query_var('paged') ? (int) get_query_var('paged') : 1;
     $first = $last = '';
-
+    $next_button = __('Next', 'stupa');
+    $prev_button = __('Previous', 'stupa');
     if ($current == 1)
-        $first = '<span class="prev disabled">Previous</span>';
+        $first = '<span class="prev disabled">' . $prev_button . '</span>';
 
     // if ($current == $total)
     // $last = '<span class="next">Next <span class="icon-wrap"><img src="./img/icon-9.svg" alt=""></span></span>';
 
     if ($current == $total)
-        $last = '<span class="next disabled">Next</span>';
+        $last = '<span class="next disabled">' . $next_button . '</span>';
 
     $template = '
     <div class="navigation %1$s" role="navigation" aria-label="%4$s">
@@ -157,4 +158,28 @@ function my_posts_pagination($template, $class)
         </div>
     </div>';
     return $template;
+}
+function language_selector_flags()
+{
+    $languages = icl_get_languages('skip_missing=0'); /* retrieve active languages */
+    if (!empty($languages)) {
+        echo '<div class="nice-select" tabindex="0">';
+        foreach ($languages as $l) {
+            if ($l['active']) echo '<span class="current">' . $l['translated_name'] . '</span>'; // Print active language inside dropdown button
+        }
+        echo '<ul class="list">'; // Crete the "Dropdown-pane"
+        foreach ($languages as $l) { // add all languages
+            if ($l['active']) {
+                echo '<li class="option selected">';
+                echo '<a href="' . $l['url'] . '">' . $l['translated_name'] . '</a>'; // Print active language inside dropdown button
+                echo '</li>';
+            } else {
+                echo '<li class="option">';
+                echo '<a href="' . $l['url'] . '">' . $l['translated_name'] . '</a>'; // Print active language inside dropdown button
+                echo '</li>';
+            }
+        }
+        echo '</ul>';
+        echo '</div>';
+    }
 }

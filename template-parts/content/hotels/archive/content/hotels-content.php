@@ -2,7 +2,8 @@
 $counter = 1;
 $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 $posts_args = array(
-    'orderby' => 'date',
+    'meta_key' => 'sort_by_number',
+    'orderby' => 'meta_value_num',
     'order' => 'DESC',
     'post_status' => 'publish',
     'post_type' => 'hotels',
