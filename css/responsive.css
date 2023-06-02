@@ -634,7 +634,7 @@
     margin: 0; }
 
   .pagoda-banner h1 {
-    margin-bottom: 0; }
+    margin-bottom: 20px; }
 
   .pagoda-banner p {
     max-width: 650px; }
@@ -1740,13 +1740,16 @@
   .hotels-content .item .text .btn-wrap a {
     left: 0; }
 
-  .btn-default b {
+  .hotels-content .btn-default b {
     left: 0 !important; }
 
   .truth-content .item .bg {
     top: -68px; }
 
   .truth-content .item:nth-child(2n) .bg p {
-    left: -10%; } }
+    left: -10%; }
+
+
+}
 
 /*# sourceMappingURL=responsive.css.map */
