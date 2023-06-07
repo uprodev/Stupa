@@ -471,7 +471,7 @@ header {
   .about .slider-wrap {
     width: calc(100% - 725px); }
   .about h2 {
-    width: 245px;
+    width: 100%!important;
     margin-bottom: 50px; }
     .about h2 b {
       font-weight: 600;
